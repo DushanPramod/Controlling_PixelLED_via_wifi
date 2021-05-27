@@ -13,7 +13,7 @@
     ![main config](/img/mainConfig.JPG)
 - Then upload the code to the NodeMCU board and after uploding done connect to the LEDs.
 - Log in to your router, see the WLAN clients list. you can see IP address of NodeMCU.
-  ![how to see ip adddress](/img/how to see ip .JPG)
+  ![how to see ip adddress](/img/how_to_see_ip.JPG)
 - Connect your device (Smart Phone or PC) which you use to control the NodeMCU to the same router.
 - Then open a web browser, enter that IP to URL and press enter.
 - Then you will be able to control your LEDs.
@@ -100,4 +100,4 @@ String patternNames[] = {
     - It is ok for a maximum delay of 1 second or 2 seconds.
     - The reason for that, if it has a delay. while running that pattern, you would not able to operate the NodeMCU by using webApp.
 
-![About Me](/img/about me.jpg)
+![About Me](/img/about_me.jpg)

@@ -2,13 +2,13 @@
 #include <EEPROM.h>
 #include <FastLED.h>
 
-const char* ssid = "DUSHAN";
-const char* password = "nUhp5dQd";
+const char* ssid = "YOUR_SSID";
+const char* password = "YOUR_PASSWORD";
 
 WiFiServer server(80);
 
 
-const int numOfPatterns = 9;
+const int numOfPatterns = 9; // number of patterns
 byte px[numOfPatterns];
 String patternNames[] = { // change the pattern names if you want
   "Pattern 1",
@@ -52,10 +52,11 @@ boolean selector_p9 = 0;
 
 
 #define LED_PIN     3
-#define NUM_LEDS    50
+#define NUM_LEDS    200
 int BRIGHTNESS = 200;
 #define LED_TYPE    WS2811
 #define COLOR_ORDER RGB
+
 CRGB leds[NUM_LEDS];
 #define UPDATES_PER_SECOND 100
 CRGBPalette16 currentPalette;
@@ -93,18 +94,6 @@ byte colors[5][3] = {  // create buddhist five color
 byte led[NUM_LEDS];
 
 char color[] = {HUE_RED, HUE_BLUE, HUE_GREEN, HUE_YELLOW, HUE_PINK, HUE_PURPLE, HUE_ORANGE};
-
-//byte colorVal[7] = {0, 160, 96, 64, 224, 192, 32};
-//byte led1[25];
-//byte led2[25];
-//byte led3[35];
-
-
-
-
-
-
-
 
 
 void setup() {
@@ -616,6 +605,7 @@ void loop()
   client.println("<meta name='viewport' content='width=device-width, initial-scale=1.0'>");
   client.println("<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x' crossorigin='anonymous'>");
   client.println("<link rel='icon' href='https://lh3.googleusercontent.com/proxy/FX0DL0_4VyCoE4PQVeID8UrRpl1jjUPANYhTOH-8qRCHbGclZ6ZqiC7a2uzFydsMJt7lZhfQVRLepgNsQ2AOMdgVFAeh-UKz' type='image/x-icon'>");
+  client.println("<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css'>");
   client.println("<title>Pixel Demo</title>");
   client.println("</head>");
 
@@ -651,8 +641,27 @@ void loop()
   client.println("</ul>");
   client.println("<button id='submitBtn' type='submit' class='btn btn-success mt-3'>Upload</button>");
   client.println("</form>");
-  client.println("<small>Developed by <b>Dushan Pramod<b></small>");
+  client.println("<small class='row'><small class='col text-center'><b type='button' data-bs-toggle='modal' data-bs-target='#aboutMe'>About Me</b> </small></small>");
   client.println("</div>");
+
+
+  client.println("<div class='modal fade' id='aboutMe' tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true'>");
+  client.println("<div class='modal-dialog'>");
+  client.println("<div class='modal-content'>");
+  client.println("<div class='modal-header'><h5 class='modal-title' id='exampleModalLabel'>About Me</h5><button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button></div>");
+  client.println("<div class='modal-body'>");
+  client.println("<span><b>Developed by Dushan Pramod</b></span><br><span>dushanpramod@gmail.com</span><br>");
+  client.println("<div class='mt-2'>");
+  client.println("<span><a class='btn btn-outline-info' href='https://github.com/DushanPramod/Controlling_PixelLED_via_wifi' role='button'>Source code <i class='bi bi-github'></i></a></span>");
+  client.println("<span><a class='btn btn-outline-primary' href='https://www.facebook.com/dushan.pramod' role='button'><i class='bi bi-facebook'></i></a></span>");
+  client.println("<span><a class='btn btn-outline-primary' href='https://twitter.com/dushanpramod' role='button'><i class='bi bi-twitter'></i></a></span>");
+  client.println("</div>");
+  client.println("</div>");
+  client.println("<div class='modal-footer'><button type='button' class='btn btn-success' data-bs-dismiss='modal'>Close</button></div>");
+  client.println("</div>");
+  client.println("</div>");
+  client.println("</div>");
+
 
 
   client.println("</body>");
@@ -668,8 +677,6 @@ void loop()
 
 
   delay(1);
-  //client = false;
-
 
   Serial.println("Client disconnected");
   Serial.println("");

@@ -10,7 +10,7 @@
   - NUM_LEDS :- Number of LEDs you use.
   - LED_TYPE :- LEDs Type (ex :- WS2811, WS2812B ... )
   - COLOR_ORDER :- No need to change necessarily.
-    ![main config](/img/mainConfig.JPG)
+  ![main config](/img/mainConfig.JPG)
 - Then upload the code to the NodeMCU board and after uploding done connect to the LEDs.
 - Log in to your router, see the WLAN clients list. you can see IP address of NodeMCU.
   ![how to see ip adddress](/img/how_to_see_ip.JPG)

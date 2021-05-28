@@ -32,7 +32,7 @@
 
 ## Additional
 
-- If you want. you can change pattern's name by changing the patternNames array as follow.
+- You can change pattern's name by changing the patternNames array as follow.
 
 ```
 String patternNames[] = {
@@ -43,7 +43,7 @@ String patternNames[] = {
 ```
 
 - If you don't have a router, you can use mobile hotspot.
-- If you want, you can change the running time of a particular pattern.
+- You can change the running time of a particular pattern.
 
   - There are separate blocks for each pattern in 'void loop' by separating like follow.
 

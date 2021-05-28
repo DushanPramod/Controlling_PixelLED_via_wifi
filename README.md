@@ -103,9 +103,11 @@ String patternNames[] = {
     }
   ```
 
-  - Write your code inside the first if condition. but there are restrictions for that.
+  - Write your code within the first if condition. but there are restrictions for that.
     - You shouldn't use 'delay' function or any loop that the execution sequence hold down within that block.
     - It is ok for a maximum delay of 1 second or 2 seconds.
     - The reason for that, if it has a delay. while running that pattern, you would not able to operate the NodeMCU by using webApp.
+  - patternCount indicates the next pattern number.
+  - patternCount of the last pattern should be 1.
 
 ![About Me](/img/about_me.jpg)

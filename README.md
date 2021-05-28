@@ -1,5 +1,7 @@
 # Controlling_Pixel LED_via_Wifi
 
+  ![pixel LEDs](/img/pixelLEDs.jpg) ![pixel LEDs](/img/NodeMCU_board.jpg) 
+
 ## How to make
 
 - Open the code in Arduino IDE

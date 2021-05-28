@@ -57,7 +57,7 @@ String patternNames[] = {
   ```
 
   - you can see first and second if condition have '(millis() - timecount < 60000)' and '(millis() - timecount > 60000))'
-  - change that value as you want. (in here 60000)
+  - change that value as you want (in here 60000). same value for both
   - That value indicates the running time in milliseconds
   - ex :- If you want to increase the running time, put a larger value.
 

@@ -37,7 +37,7 @@
 ```
 String patternNames[] = {
   "Running",
-  "Raninbow",
+  "Rainbow",
   ...
 };
 ```

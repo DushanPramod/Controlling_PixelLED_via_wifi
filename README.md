@@ -1,6 +1,6 @@
 # Controlling_Pixel LED_via_Wifi
 
-  ![pixel LEDs](/img/pixelLEDs.jpg) ![pixel LEDs](/img/NodeMCU_board.jpg) 
+![pixel LEDs](/img/pixelLEDs.jpg) ![pixel LEDs](/img/NodeMCU_board.jpg)
 
 ## How to make
 
@@ -13,11 +13,17 @@
   - LED_TYPE :- LEDs Type (ex :- WS2811, WS2812B ... )
   - COLOR_ORDER :- No need to change necessarily.
     ![main config](/img/mainConfig.JPG)
+- chnage the gateway ip address. put your router ip address here.
+  ```
+  IPAddress gateway(192, 168, 8, 1);
+  ```
+- change the local_IP address if you want.
+  ```
+  IPAddress local_IP(192, 168, 8, 107);
+  ```
 - Then upload the code to the NodeMCU board and after uploding done connect to the LEDs.
-- Log in to your router, see the WLAN clients list. you can see IP address of NodeMCU.
-  ![how to see ip adddress](/img/how_to_see_ip.JPG)
 - Connect your device (Smart Phone or PC) which you use to control the NodeMCU to the same router.
-- Then open a web browser, enter that IP to URL and press enter.
+- Then open a web browser, enter the IP which you above configured as local_ip to URL and press enter.
 - Then you will be able to control your LEDs.
   ![controling window](/img/htmlPage.png)
 

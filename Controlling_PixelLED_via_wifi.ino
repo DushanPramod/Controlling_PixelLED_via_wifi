@@ -7,6 +7,13 @@ const char* password = "YOUR_PASSWORD";
 
 WiFiServer server(80);
 
+IPAddress local_IP(192, 168, 8, 107);
+// Set your Gateway IP address
+IPAddress gateway(192, 168, 8, 1);
+//
+IPAddress subnet(255, 255, 255, 0);
+//IPAddress primaryDNS(8, 8, 8, 8);   //optional
+//IPAddress secondaryDNS(8, 8, 4, 4); //optional
 
 const int numOfPatterns = 9; // number of patterns
 byte px[numOfPatterns];
@@ -103,6 +110,13 @@ void setup() {
   //connect to WiFi network
   Serial.println();
   Serial.println();
+
+  // Configures static IP address
+  if (!WiFi.config(local_IP, gateway, subnet)) {
+    Serial.println("STA Failed to configure");
+  }
+
+  
   Serial.print("Connecting to ");
   Serial.println(ssid);
 

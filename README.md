@@ -110,4 +110,3 @@ String patternNames[] = {
   - patternCount indicates the next pattern number.
   - patternCount of the last pattern should be 1.
 
-![About Me](/img/about_me.jpg)
